@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get '/login', to: "auth#spotify_request"
       get '/auth', to: "auth#show"
       get '/user', to: "users#create"
+      get '/users', to: "users#index"
+      get '/users/:id', to: "users#show"
     end
   end
 end

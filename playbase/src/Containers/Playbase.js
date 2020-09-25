@@ -10,6 +10,7 @@ class Playbase extends Component {
   render() {
     return(
       <div className="song-finder">
+        {console.log(this.props.state)}
        <h3>It works!</h3>
       </div>
     )
