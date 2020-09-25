@@ -17,8 +17,8 @@ class Api::V1::UsersController < ApplicationController
       grant_type: "authorization_code",
       code: params[:code],
       redirect_uri: 'http://localhost:3000/api/v1/user',
-      client_id: 'f1bee6691b9c499b8721212cd47ffeee',
-      client_secret: 'ef9ad588db7f4b018b6f92e36aef7194'
+      client_id: 'id',
+      client_secret: 'secret'
     }
 
     auth_response = RestClient.post('https://accounts.spotify.com/api/token', body)
