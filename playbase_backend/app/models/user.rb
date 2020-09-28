@@ -12,10 +12,11 @@ class User < ApplicationRecord
       body = {
         grant_type: 'refresh_token',
         refresh_token: self.refresh_token,
-        client_id: 'id',
-        client_secret: 'secret'
+        client_id: 'client_id',
+        client_secret: 'secret_id'
       }
-      auth_response = RestClient.post('https://accounts.spotify.com/api/token', body)
+      headers =  {content_type: 'application/x-www-form-urlencoded'}
+      auth_response = RestClient.post('https://accounts.spotify.com/api/token', body, headers)
       auth_params = JSON.parse(auth_response)
       self.update(access_token: auth_params["access_token"])
     else
