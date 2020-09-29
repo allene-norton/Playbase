@@ -22,7 +22,8 @@ class Home extends Component {
       isLoggedIn,
       user: {},
       albums: [],
-      albumSearchResult: []
+      albumSearchResult: [],
+      searchTxt: ''
     }
   }
 
@@ -41,10 +42,10 @@ class Home extends Component {
   }
 
 
-  getAlbum = () => {
-    // e.preventDefault()
+  getAlbum = (searchedAlbum) => {
+    //e.preventDefault()
     // console.log("clicked")
-    const album = "nathaniel"
+    const album = searchedAlbum
     const accessToken = this.state.user.access_token
     spotifyApi.setAccessToken(accessToken);
     spotifyApi.searchAlbums(album).then(data => {
@@ -53,6 +54,10 @@ class Home extends Component {
       this.setState({ albumSearchResult: data.albums.items })
       // console.log(this.state.albumSearchResult)
     }).catch(error => console.log(error))
+  }
+
+  handleSearch = (e) => {
+    this.setState({ searchTxt: e.target.value })
   }
 
   postAlbum = (albumInfo) => {
@@ -94,7 +99,8 @@ class Home extends Component {
             getAlbum={this.getAlbum}
             albumSearchResult={this.state.albumSearchResult}
             postAlbum={this.postAlbum} 
-            accessToken = {this.state.user.access_token} />}
+            accessToken = {this.state.user.access_token}
+            handleSearch={this.handleSearch} />}
         />
       </Router>
 

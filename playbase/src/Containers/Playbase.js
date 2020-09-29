@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import ResultsContainer from './ResultsContainer'
 import Shelf from './Shelf'
 import SpotifyPlayer from "react-spotify-web-playback"
+import SearchForm from '../Components/SearchForm'
 
 const albumsAPI = "http://localhost:3000/albums"
 
@@ -49,7 +50,7 @@ class Playbase extends Component {
         {/* {console.log(this.props.state.access_token)}
         {console.log(this.props.state.refresh_token)} */}
         <h3>It works!</h3>
-        <button onClick={this.props.getAlbum}>Test</button>
+        <SearchForm getAlbum={this.props.getAlbum} handleSearch = {this.props.handleSearch} />
 
         {console.log(this.props.albumSearchResult)}
         <ResultsContainer albumSearchResult={this.props.albumSearchResult}
