@@ -12,8 +12,8 @@ class User < ApplicationRecord
       body = {
         grant_type: 'refresh_token',
         refresh_token: self.refresh_token,
-        client_id: 'client_id',
-        client_secret: 'secret_id'
+        client_id: Rails.application.credentials[:client_id],
+        client_secret: Rails.application.credentials[:client_secret]
       }
       headers =  {content_type: 'application/x-www-form-urlencoded'}
       auth_response = RestClient.post('https://accounts.spotify.com/api/token', body, headers)

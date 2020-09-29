@@ -24,14 +24,14 @@ class Playbase extends Component {
 
   setDisplayPlayer = (albumURI) => {
     this.setState({
-      displayPlayer: !this.state.displayPlayer,
+      displayPlayer: true,
       currentURI: albumURI
     })
   }
 
   renderPlayer = () => {
     if (this.state.displayPlayer) {
-      return <SpotifyPlayer
+      return <SpotifyPlayer autoPlay={true}
         token={this.props.accessToken }     
         uris={this.state.currentURI}
       />
