@@ -9,7 +9,7 @@ class Shelf extends Component {
     return(
       <div className="shelf">
           <h1>Shelf</h1>
-          {this.props.albums.map(album => <ShelfAlbums album={album} key={album.id} setDisplayPlayer = {this.props.setDisplayPlayer}/> )} 
+          {this.props.albums.map(album => <ShelfAlbums album={album} key={album.id} deleteAlbum={this.props.deleteAlbum} setDisplayPlayer = {this.props.setDisplayPlayer}/> )} 
       </div>
     )
   }

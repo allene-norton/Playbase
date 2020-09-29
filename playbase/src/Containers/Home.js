@@ -23,7 +23,7 @@ class Home extends Component {
       user: {},
       albums: [],
       albumSearchResult: [],
-      searchTxt: ''
+      addedAlbum: {}
     }
   }
 
@@ -70,7 +70,10 @@ class Home extends Component {
       },
       body: JSON.stringify(albumInfo)
     }).then(res => res.json())
-      .then(data => console.log("working", data))
+      .then(data => {
+        console.log("working", data)
+        this.setState({ addedAlbum: data })
+      })
   }
 
 
@@ -96,6 +99,7 @@ class Home extends Component {
         <Route exact path="/playbase"
           component={() => <Playbase
             state={this.state.user}
+            addedAlbum={this.state.addedAlbum}
             getAlbum={this.getAlbum}
             albumSearchResult={this.state.albumSearchResult}
             postAlbum={this.postAlbum} 

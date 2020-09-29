@@ -17,7 +17,17 @@ class Playbase extends Component {
 
   componentDidMount() {
     this.fetchAlbums()
+    this.setState({userAlbums: [...this.state.userAlbums, this.props.addedAlbum]})
   }
+
+  deleteAlbum = (albumID) => {
+    console.log(albumID)
+    return fetch(`http://localhost:3000/albums/${albumID}`, {
+      method: 'DELETE'
+    }).then(this.setState((prev) => ({ userAlbums: prev.userAlbums.filter(album => album.id !== albumID) })))
+  }
+
+  
 
   fetchAlbums = () => {
     return fetch(albumsAPI).then(res => res.json()).then(data => this.setState({ userAlbums: data }))
@@ -56,6 +66,7 @@ class Playbase extends Component {
         <ResultsContainer albumSearchResult={this.props.albumSearchResult}
           postAlbum={this.props.postAlbum} />
         <Shelf albums={this.state.userAlbums} 
+        deleteAlbum={this.deleteAlbum}
         setDisplayPlayer = {this.setDisplayPlayer}/>
         {this.renderPlayer()}
 
