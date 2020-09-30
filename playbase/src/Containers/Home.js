@@ -78,6 +78,10 @@ class Home extends Component {
       })
   }
 
+  logout = () => {
+    this.setState({isLoggedIn: false})
+  }
+
 
 
   renderHomeOrPlaybase = () => {
@@ -95,7 +99,7 @@ class Home extends Component {
       )
     } else if (this.state.isLoggedIn) {
       return <Router>
-        <NavBar />
+        <NavBar logout={this.logout}/>
         {/* <Route exact path="/"
           component={() => <Button />}
         /> */}
@@ -112,6 +116,7 @@ class Home extends Component {
         <Route exact path="/search"
           component={() => <SearchForm getAlbum={this.getAlbum} handleSearch={this.handleSearch} albumSearchResult={this.state.albumSearchResult}
             postAlbum={this.postAlbum} />} />
+            <Route exact path='/' />
       </Router>
 
     }

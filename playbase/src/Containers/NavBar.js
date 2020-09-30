@@ -9,6 +9,10 @@ export default class MenuExampleSecondary extends Component {
         this.setState({ activeItem: name })
     }
 
+    handleLogout = () => {
+        this.props.logout()
+    }
+
     render() {
         const { activeItem } = this.state
 
@@ -25,6 +29,12 @@ export default class MenuExampleSecondary extends Component {
                     name='search for albums'
                     active={activeItem === 'search'}
                     onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                    as={NavLink} to="/"
+                    name='log out'
+                    active={activeItem === 'log-out'}
+                    onClick={this.handleLogout}
                 />
                 {/* <Menu.Item
                     as={NavLink} to="/shelf"

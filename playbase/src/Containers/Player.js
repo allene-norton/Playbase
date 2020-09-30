@@ -6,7 +6,7 @@ class Player extends Component {
 
     renderPlayer = () => {
         if (this.props.displayPlayer) {
-          return <SpotifyPlayer autoPlay={true}
+          return <SpotifyPlayer autoPlay={true} play={true}
             token={this.props.accessToken}
             uris={this.props.currentURI}
           />

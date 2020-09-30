@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Image, Item, Grid } from 'semantic-ui-react'
 //import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
 //import SearchBar from '../Components/SearchBar'
+import { Responsive, Segment } from 'semantic-ui-react'
 
 class Result extends Component {
     state = {
@@ -18,11 +20,27 @@ class Result extends Component {
         let album = this.props.result
         console.log(this.props.result.uri)
         return (
-            <div className="card">
-                <h3>{album.name}</h3>
-        <h4>{album.artists[0].name}</h4>
-        <img src={album.images[1]["url"]} alt = {album.name} />
-        <button onClick={this.handleClick}>Add to Shelf</button>
+            // <Segment.Group>
+            <div className="float-item">
+                <Responsive as={Item.Group}>
+                    <Item.Group unstackable relaxed>
+
+                        <Item>
+
+                            <Item.Image src={album.images[1]["url"]} alt={album.name} />
+                            <Responsive as={Item.Content}>
+                                {/* <Item.Content> */}
+                                    <Item.Header>{album.name}</Item.Header>
+                                    <Item.Meta>
+                                        <span>{album.artists[0].name}</span>
+                                    </Item.Meta>
+                                    <button onClick={this.handleClick}>Add to Shelf</button>
+
+                                {/* </Item.Content> */}
+                            </Responsive>
+                        </Item>
+                    </Item.Group>
+                </Responsive>
             </div>
         )
     }
