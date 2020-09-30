@@ -57,6 +57,7 @@ class Playbase extends Component {
 
   render() {
     return (
+      <div>
         <div className="album-finder">
 
           <div className="shelf">
@@ -64,10 +65,13 @@ class Playbase extends Component {
               deleteAlbum={this.deleteAlbum}
               setDisplayPlayer={this.setDisplayPlayer} />
           </div>
-<Player displayPlayer = {this.state.displayPlayer} accessToken={this.props.accessToken} currentURI={this.state.currentURI} />
         </div>
+        <div>
+          <Player displayPlayer={this.state.displayPlayer} accessToken={this.props.accessToken} currentURI={this.state.currentURI} />
+        </div>
+      </div>
 
-        // {/* <div className="player">{this.renderPlayer()}</div> */}
+      // {/* <div className="player">{this.renderPlayer()}</div> */}
     )
   }
 }
