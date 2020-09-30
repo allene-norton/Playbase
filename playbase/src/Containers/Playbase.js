@@ -57,13 +57,16 @@ class Playbase extends Component {
     return (
       <Router>
         <div className="album-finder">
-                    
-          <Shelf albums={this.state.userAlbums}
-            deleteAlbum={this.deleteAlbum}
-            setDisplayPlayer={this.setDisplayPlayer} />
-          {this.renderPlayer()}
 
+          <div className="shelf">
+            <Shelf albums={this.state.userAlbums}
+              deleteAlbum={this.deleteAlbum}
+              setDisplayPlayer={this.setDisplayPlayer} />
+          </div>
         </div>
+        <footer>
+        <div className="player">{this.renderPlayer()}</div>
+        </footer>
       </Router>
     )
   }
