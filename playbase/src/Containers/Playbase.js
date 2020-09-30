@@ -4,6 +4,8 @@ import Shelf from './Shelf'
 import SpotifyPlayer from "react-spotify-web-playback"
 import SearchForm from '../Components/SearchForm'
 
+import Player from "./Player"
+
 const albumsAPI = "http://localhost:3000/albums"
 
 class Playbase extends Component {
@@ -39,23 +41,22 @@ class Playbase extends Component {
     })
   }
 
-  renderPlayer = () => {
-    if (this.state.displayPlayer) {
-      return <SpotifyPlayer autoPlay={true}
-        token={this.props.accessToken}
-        uris={this.state.currentURI}
-      />
-    } else {
-      return <div></div>
-    }
-  }
+  // renderPlayer = () => {
+  //   if (this.state.displayPlayer) {
+  //     return <SpotifyPlayer autoPlay={true}
+  //       token={this.props.accessToken}
+  //       uris={this.state.currentURI}
+  //     />
+  //   } else {
+  //     return <div></div>
+  //   }
+  // }
 
 
 
 
   render() {
     return (
-      <Router>
         <div className="album-finder">
 
           <div className="shelf">
@@ -63,11 +64,10 @@ class Playbase extends Component {
               deleteAlbum={this.deleteAlbum}
               setDisplayPlayer={this.setDisplayPlayer} />
           </div>
+<Player displayPlayer = {this.state.displayPlayer} accessToken={this.props.accessToken} currentURI={this.state.currentURI} />
         </div>
-        <footer>
-        <div className="player">{this.renderPlayer()}</div>
-        </footer>
-      </Router>
+
+        // {/* <div className="player">{this.renderPlayer()}</div> */}
     )
   }
 }

@@ -162,7 +162,11 @@
   }
 }
 
+.shelf {
+  position: relative;
+  top: 0%;
+}
 .player {
-  position: absolute;
-  bottom: 0%;
+  position: relative;
+  top: 100%;
 }
