@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ResultsContainer from '../Containers/ResultsContainer'
+
 
 class SearchForm extends Component {
     state = {
@@ -11,7 +13,7 @@ class SearchForm extends Component {
     }
 
     handleChange = (e) => {
-        this.setState({searchTxt: e.target.value})
+        this.setState({ searchTxt: e.target.value })
         console.log(e.target.value)
     }
 
@@ -22,6 +24,8 @@ class SearchForm extends Component {
                     <input type="text" onChange={(e) => this.handleChange(e)}></input>
                     <input type="submit"></input>
                 </form>
+                <ResultsContainer albumSearchResult={this.props.albumSearchResult}
+                    postAlbum={this.props.postAlbum} />
 
             </div>
         )

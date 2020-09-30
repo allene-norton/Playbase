@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-
+import NavBar from './NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Button from '../Components/Button'
 import Playbase from './Playbase'
 import SpotifyWebApi from "spotify-web-api-js";
+import SearchForm from '../Components/SearchForm'
+
 
 
 const spotifyApi = new SpotifyWebApi();
@@ -87,25 +89,29 @@ class Home extends Component {
             <h3 className="message">Playbase!</h3>
           </div>
           <div className="login-button">
-            <Button />
+            <Button logged={this.state.isLoggedIn} />
           </div>
         </div>
       )
     } else if (this.state.isLoggedIn) {
       return <Router>
-        <Route exact path="/"
+        <NavBar />
+        {/* <Route exact path="/"
           component={() => <Button />}
-        />
+        /> */}
         <Route exact path="/playbase"
           component={() => <Playbase
             state={this.state.user}
             addedAlbum={this.state.addedAlbum}
             getAlbum={this.getAlbum}
             albumSearchResult={this.state.albumSearchResult}
-            postAlbum={this.postAlbum} 
-            accessToken = {this.state.user.access_token}
+            postAlbum={this.postAlbum}
+            accessToken={this.state.user.access_token}
             handleSearch={this.handleSearch} />}
         />
+        <Route exact path="/search"
+          component={() => <SearchForm getAlbum={this.getAlbum} handleSearch={this.handleSearch} albumSearchResult={this.state.albumSearchResult}
+            postAlbum={this.postAlbum} />} />
       </Router>
 
     }

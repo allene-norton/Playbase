@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-//import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
-import ResultsContainer from './ResultsContainer'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import Shelf from './Shelf'
 import SpotifyPlayer from "react-spotify-web-playback"
 import SearchForm from '../Components/SearchForm'
@@ -17,7 +16,7 @@ class Playbase extends Component {
 
   componentDidMount() {
     this.fetchAlbums()
-    this.setState({userAlbums: [...this.state.userAlbums, this.props.addedAlbum]})
+    this.setState({ userAlbums: [...this.state.userAlbums, this.props.addedAlbum] })
   }
 
   deleteAlbum = (albumID) => {
@@ -27,7 +26,7 @@ class Playbase extends Component {
     }).then(this.setState((prev) => ({ userAlbums: prev.userAlbums.filter(album => album.id !== albumID) })))
   }
 
-  
+
 
   fetchAlbums = () => {
     return fetch(albumsAPI).then(res => res.json()).then(data => this.setState({ userAlbums: data }))
@@ -43,7 +42,7 @@ class Playbase extends Component {
   renderPlayer = () => {
     if (this.state.displayPlayer) {
       return <SpotifyPlayer autoPlay={true}
-        token={this.props.accessToken }     
+        token={this.props.accessToken}
         uris={this.state.currentURI}
       />
     } else {
@@ -56,21 +55,16 @@ class Playbase extends Component {
 
   render() {
     return (
-      <div className="album-finder">
-        {/* {console.log(this.props.state.access_token)}
-        {console.log(this.props.state.refresh_token)} */}
-        <h3>It works!</h3>
-        <SearchForm getAlbum={this.props.getAlbum} handleSearch = {this.props.handleSearch} />
+      <Router>
+        <div className="album-finder">
+                    
+          <Shelf albums={this.state.userAlbums}
+            deleteAlbum={this.deleteAlbum}
+            setDisplayPlayer={this.setDisplayPlayer} />
+          {this.renderPlayer()}
 
-        {console.log(this.props.albumSearchResult)}
-        <ResultsContainer albumSearchResult={this.props.albumSearchResult}
-          postAlbum={this.props.postAlbum} />
-        <Shelf albums={this.state.userAlbums} 
-        deleteAlbum={this.deleteAlbum}
-        setDisplayPlayer = {this.setDisplayPlayer}/>
-        {this.renderPlayer()}
-
-      </div>
+        </div>
+      </Router>
     )
   }
 }
