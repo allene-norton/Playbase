@@ -6,7 +6,7 @@ import Result from '../Components/Result'
 class ResultsContainer extends Component {
   render() {
     return(
-      <div className="album-finder">
+      <div className="search-results">
        <h3>Search Results</h3>
        {this.props.albumSearchResult.map(result => <Result key={result.id} result={result} postAlbum = {this.props.postAlbum} />)}
       </div>
