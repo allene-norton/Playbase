@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ResultsContainer from '../Containers/ResultsContainer'
-
+import { Button, Form } from 'semantic-ui-react'
 
 class SearchForm extends Component {
     state = {
@@ -20,10 +20,22 @@ class SearchForm extends Component {
     render() {
         return (
             <div className = "search-form">
-                <form onSubmit={(e) => this.handleSubmit(e)}>
+                <br></br>
+                {/* <form onSubmit={(e) => this.handleSubmit(e)}>
                     <input type="text" onChange={(e) => this.handleChange(e)}></input>
                     <input type="submit"></input>
-                </form>
+                </form> */}
+
+                <Form onSubmit={(e) => this.handleSubmit(e)}>
+                    <Form.Field>
+                    <input placeholder='Search' onChange={(e) => this.handleChange(e)}/>
+                    </Form.Field>
+                    <Button inverted type='submit'>Submit</Button>
+                </Form>
+                
+
+  
+
                 <ResultsContainer albumSearchResult={this.props.albumSearchResult}
                     postAlbum={this.props.postAlbum} />
 

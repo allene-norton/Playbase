@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import NavBar from './NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Button from '../Components/Button'
+import LogInButton from '../Components/Button'
 import Playbase from './Playbase'
 import SpotifyWebApi from "spotify-web-api-js";
 import SearchForm from '../Components/SearchForm'
+import logo from '../images/playbase2.png'
+
 
 
 
@@ -88,12 +90,12 @@ class Home extends Component {
     console.log('renderHomeOr...')
     if (!this.state.isLoggedIn) {
       return (
-        <div>
+        <div className = "home-page-div">
           <div className="message-container">
-            <h3 className="message">Playbase!</h3>
-          </div>
-          <div className="login-button">
-            <Button logged={this.state.isLoggedIn} />
+            <img src={logo} alt='playbase logo' />
+            <div className="login-button">
+              <LogInButton logged={this.state.isLoggedIn} />
+            </div>
           </div>
         </div>
       )

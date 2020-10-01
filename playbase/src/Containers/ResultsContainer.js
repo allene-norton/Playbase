@@ -9,7 +9,7 @@ class ResultsContainer extends Component {
   render() {
     return (
       <div className="search-results">
-
+          <br></br>
           <Grid container stackable relaxed='very' columns={4} >
           {this.props.albumSearchResult.map(result => 
 
