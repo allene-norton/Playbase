@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Slide({ slide, offset, setDisplayPlayer }) {
+function Slide({ slide, offset, setDisplayPlayer, deleteAlbum}) {
     function useTilt(active) {
         const ref = React.useRef(null);
 
@@ -51,7 +51,9 @@ function Slide({ slide, offset, setDisplayPlayer }) {
         setDisplayPlayer(albumURI)
     }
 
-    
+    const handleDelete = () => {
+        deleteAlbum(slide.id)
+    }
 
     return (
         <div
@@ -79,6 +81,7 @@ function Slide({ slide, offset, setDisplayPlayer }) {
                     <h2 className="slideTitle">{slide.name}</h2>
                     <h3 className="slideSubtitle">{slide.artist}</h3>
                     <div onClick={handleClick} className="button"><p>Play Album</p> </div>
+                    <div onClick={handleDelete} className="button"><p>Remove from Shelf</p> </div>
                     {/* <p className="slideDescription">{slide.description}</p> */}
                 </div>
             </div>

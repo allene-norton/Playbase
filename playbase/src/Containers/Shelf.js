@@ -41,7 +41,7 @@ const [state, dispatch] = React.useReducer(slidesReducer, initialState);
       {[...slides, ...slides, ...slides].map((slide, i) => {
         let offset = slides.length + (state.slideIndex - i);
         console.log(state)
-        return <Slide slide={slide} offset={offset} setDisplayPlayer={props.setDisplayPlayer} key={i} />;
+        return <Slide slide={slide} offset={offset} setDisplayPlayer={props.setDisplayPlayer} deleteAlbum={props.deleteAlbum} key={i} />;
       })}
       <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
     </div>

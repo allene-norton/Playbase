@@ -56,6 +56,7 @@ class Playbase extends Component {
 
 
   render() {
+    if(this.state.userAlbums.length >= 1){
     return (
       <div>
         <div className="album-finder">
@@ -73,6 +74,13 @@ class Playbase extends Component {
 
       // {/* <div className="player">{this.renderPlayer()}</div> */}
     )
+    }
+    else
+      {
+        return(
+        <div className= "no-albums" ><p>Click "Search Albums," to Add Albums to Your Shelf</p></div>
+        )
+      }
   }
 }
 
