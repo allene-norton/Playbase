@@ -1,4 +1,6 @@
 import React from 'react'
+import { Button } from 'semantic-ui-react'
+
 
 function Slide({ slide, offset, setDisplayPlayer, deleteAlbum}) {
     function useTilt(active) {
@@ -80,8 +82,10 @@ function Slide({ slide, offset, setDisplayPlayer, deleteAlbum}) {
                 <div className="slideContentInner">
                     <h2 className="slideTitle">{slide.name}</h2>
                     <h3 className="slideSubtitle">{slide.artist}</h3>
-                    <div onClick={handleClick} className="button"><p>Play Album</p> </div>
-                    <div onClick={handleDelete} className="button"><p>Remove from Shelf</p> </div>
+                    <br /><br /><br /><br />
+                    <Button color='olive' onClick={handleClick} className="button">Play Album</Button>
+                    <br /><br />
+                    <Button color='grey' onClick={handleDelete} className="button">Remove from Shelf</Button>
                     {/* <p className="slideDescription">{slide.description}</p> */}
                 </div>
             </div>

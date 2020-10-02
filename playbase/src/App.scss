@@ -96,7 +96,7 @@
   transform-style: preserve-3d;
   transform: translateZ(2rem);
   transition: opacity 0.3s linear;
-  text-shadow: 0 0.1rem 1rem #000;
+  text-shadow: 0 4px 8px #000;
   opacity: 0;
 
   .slideSubtitle,
@@ -106,6 +106,9 @@
     letter-spacing: 0.2ch;
     text-transform: uppercase;
     margin: 0;
+    &:hover {
+      color: #fdfbda;
+    }
   }
 
   .slideSubtitle::before {
@@ -162,6 +165,12 @@
     }
   }
 }
+
+.ui.olive.button, .ui.grey.button {
+  box-shadow: 1px 1px 2px #2b2b2b;
+}
+
+
 
 .shelf {
   position: relative;
