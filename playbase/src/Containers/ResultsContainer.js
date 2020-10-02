@@ -8,9 +8,9 @@ import { Item, Grid } from 'semantic-ui-react'
 class ResultsContainer extends Component {
   render() {
     return (
-      <div className="search-results">
+      <div className="search-results" id='search-results'>
           <br></br>
-          <Grid container stackable relaxed='very' columns={4} >
+          <Grid container centered stackable relaxed='very' columns={4} >
           {this.props.albumSearchResult.map(result => 
 
           <Grid.Column> 

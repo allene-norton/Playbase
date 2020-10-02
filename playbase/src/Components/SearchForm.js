@@ -30,7 +30,7 @@ class SearchForm extends Component {
                     <Form.Field>
                     <input placeholder='Search' onChange={(e) => this.handleChange(e)}/>
                     </Form.Field>
-                    <Button inverted type='submit'>Submit</Button>
+                    <Button basic type='submit'>Submit</Button>
                 </Form>
                 
 
