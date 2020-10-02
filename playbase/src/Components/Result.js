@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Image, Item, Grid } from 'semantic-ui-react'
-//import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
-//import SearchBar from '../Components/SearchBar'
-import { Responsive, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Item } from 'semantic-ui-react'
+import { Responsive } from 'semantic-ui-react'
 
 class Result extends Component {
     state = {
@@ -15,6 +14,7 @@ class Result extends Component {
     }
     handleClick = () => {
         this.props.postAlbum(this.state)
+        // alert("Album added.")
     }
 
     handleName = () => {
@@ -44,7 +44,7 @@ class Result extends Component {
                                     <Item.Meta>
                                         <span>{album.artists[0].name}</span>
                                     </Item.Meta>
-                                    <button className='btn-two' onClick={this.handleClick}>Add to Shelf</button>
+                                    <Link to='/playbase'><button className='btn-two' id='add' onClick={this.handleClick}>Add to Shelf</button></Link>
 
                                 {/* </Item.Content> */}
                             </Responsive>

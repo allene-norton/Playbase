@@ -56,31 +56,32 @@ class Playbase extends Component {
 
 
   render() {
-    if(this.state.userAlbums.length >= 1){
-    return (
-      <div>
-        <div className="album-finder">
+    if (this.state.userAlbums.length >= 1) {
+      return (
+        <div>
+          <div className="album-finder">
 
-          <div className="shelf">
-            <Shelf albums={this.state.userAlbums}
-              deleteAlbum={this.deleteAlbum}
-              setDisplayPlayer={this.setDisplayPlayer} />
+            <div className="shelf">
+              <Shelf albums={this.state.userAlbums}
+                deleteAlbum={this.deleteAlbum}
+                setDisplayPlayer={this.setDisplayPlayer} />
+            </div>
+          </div>
+          <div>
+            <Player displayPlayer={this.state.displayPlayer} accessToken={this.props.accessToken} currentURI={this.state.currentURI} />
           </div>
         </div>
-        <div>
-          <Player displayPlayer={this.state.displayPlayer} accessToken={this.props.accessToken} currentURI={this.state.currentURI} />
-        </div>
-      </div>
 
-      // {/* <div className="player">{this.renderPlayer()}</div> */}
-    )
+        // {/* <div className="player">{this.renderPlayer()}</div> */}
+      )
     }
-    else
-      {
-        return(
-        <div className= "no-albums" ><p>Click "Search Albums," to Add Albums to Your Shelf</p></div>
-        )
-      }
+    else {
+      return (
+        <div className="no-albums-container">
+          <div className="no-albums" ><p>Click 'Search' to Add Albums to Your collection </p></div>
+        </div>
+      )
+    }
   }
 }
 

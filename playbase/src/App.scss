@@ -189,6 +189,8 @@
 .search-form {
   text-align: center;
   background-color: #FFF;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+
 }
 
 // .item {
@@ -330,7 +332,7 @@
 
 .ui.centered.container.stackable.very.relaxed.four.column.grid {
   width: 100%;
-  background-color: white !important;
+  background-color: #FFF !important;
   position: flex;
   padding-left: 200px;
 }
@@ -379,12 +381,12 @@ nav ul {
       letter-spacing: 10px;
       font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
       font-size: 18px;
-      color: #475a61;
+      color: #566c74;
       text-align: center;
       padding-bottom: 50px;
       transition: background .25s, box-shadow .15s;
       &:hover {
-          color:  #002bff;
+          color:  #80a5b3;
           // background: #FFC4EB;
           // background-blend-mode: difference;
           // box-shadow: 0px 4px 0px 0px #BB8EAC;
@@ -399,6 +401,7 @@ html {
   background-color: #000;
 }
 body {
+  color: #FFF;
   background-color: #000;
 }
 body #fonts {
@@ -479,7 +482,7 @@ body #fonts {
       text-transform: uppercase;
       letter-spacing: 4px;
       font-size: 10px;
-      box-shadow: 1px 1px 2px #2b2b2b;
+      box-shadow: 1px 1px 2px #a0a0a0;
       outline: none;
       &:hover {
         opacity: 1;
@@ -525,6 +528,19 @@ body #fonts {
   
       transform: scale(1,1);
     }
+
+.no-albums-container{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.no-albums{
+  padding-top: 100px;
+  font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      font-size: 18px;
+}
     
  
 
