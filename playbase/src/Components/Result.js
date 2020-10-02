@@ -6,7 +6,7 @@ import { Responsive } from 'semantic-ui-react'
 class Result extends Component {
     state = {
         name: this.props.result.name,
-        image_url: this.props.result.images[1]["url"],
+        image_url: this.props.result.images[0]["url"],
         artist: this.props.result.artists[0].name,
         album_url: this.props.result.external_urls.spotify,
         spotify_id: this.props.result.id,
