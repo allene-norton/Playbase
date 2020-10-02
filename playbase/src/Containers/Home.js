@@ -5,7 +5,7 @@ import LogInButton from '../Components/Button'
 import Playbase from './Playbase'
 import SpotifyWebApi from "spotify-web-api-js";
 import SearchForm from '../Components/SearchForm'
-import logo from '../images/playbase2.png'
+import logo from '../images/playbaseSmall.png'
 
 
 

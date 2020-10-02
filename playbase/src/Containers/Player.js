@@ -9,6 +9,15 @@ class Player extends Component {
           return <SpotifyPlayer autoPlay={true} play={true}
             token={this.props.accessToken}
             uris={this.props.currentURI}
+            styles={{
+              bgColor: '#000',
+              color: '#fff',
+              loaderColor: '#fff',
+              sliderColor: '#566c74',
+              savedColor: '#fff',
+              trackArtistColor: '#ccc',
+              trackNameColor: '#fff',
+            }}
           />
         } else {
           return <div></div>
