@@ -16,6 +16,16 @@ class Result extends Component {
     handleClick = () => {
         this.props.postAlbum(this.state)
     }
+
+    handleName = () => {
+        let albumName
+        if (this.props.result.name.length > 17) {
+            albumName = this.props.result.name.slice(0,15) + '...'
+            return albumName
+        } else {
+            return this.props.result.name
+        }
+    }
     render() {
         let album = this.props.result
         console.log(this.props.result.uri)
@@ -30,11 +40,11 @@ class Result extends Component {
                             <Item.Image src={album.images[1]["url"]} alt={album.name} />
                             <Responsive as={Item.Content}>
                                 {/* <Item.Content> */}
-                                    <Item.Header>{album.name}</Item.Header>
+                                    <Item.Header>{this.handleName()}</Item.Header>
                                     <Item.Meta>
                                         <span>{album.artists[0].name}</span>
                                     </Item.Meta>
-                                    <button onClick={this.handleClick}>Add to Shelf</button>
+                                    <button className='btn-two' onClick={this.handleClick}>Add to Shelf</button>
 
                                 {/* </Item.Content> */}
                             </Responsive>

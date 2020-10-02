@@ -83,9 +83,9 @@ function Slide({ slide, offset, setDisplayPlayer, deleteAlbum}) {
                     <h2 className="slideTitle">{slide.name}</h2>
                     <h3 className="slideSubtitle">{slide.artist}</h3>
                     <br /><br /><br /><br />
-                    <Button color='olive' onClick={handleClick} className="button">Play Album</Button>
+                    <button  onClick={handleClick} className="btn-three">Play</button>
                     <br /><br />
-                    <Button color='grey' onClick={handleDelete} className="button">Remove from Shelf</Button>
+                    <button  onClick={handleDelete} className="btn-three">Remove</button>
                     {/* <p className="slideDescription">{slide.description}</p> */}
                 </div>
             </div>

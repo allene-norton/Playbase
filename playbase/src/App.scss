@@ -166,9 +166,6 @@
   }
 }
 
-.ui.olive.button, .ui.grey.button {
-  box-shadow: 1px 1px 2px #2b2b2b;
-}
 
 
 
@@ -215,10 +212,17 @@
   visibility: hidden;
   opacity: 0;
   overflow-wrap: break-word;
+  font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+
 
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
+  color: #475a61;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
 }
 
 .item {
@@ -397,7 +401,132 @@ html {
 body {
   background-color: #000;
 }
+body #fonts {
+  font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  }
 
+.btn-three {
+  font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    color: #475a61;
+    height: 40px;
+    transition: all 0.5s;
+    position: relative;
+    opacity: 0.75;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 18px;
+    box-shadow: 1px 1px 2px #2b2b2b;
+    outline: none;
+    &:hover {
+      opacity: 1;
+      color: #397286
+    }
+  }
+.btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(37, 37, 37, 0.1);
+    transition: all 0.1s;
+    border: none;
+    outline: none;
+
+  }
+.btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    outline: none;
+
+    transition: all 0.1s;
+    border: none;
+    transform: scale(1.2,1.2);
+  }
+.btn-three:hover::after {
+    opacity: 1;
+    outline: none;
+
+    transform: scale(1,1);
+  }
+  
+  .ui.items>.item.content{
+    color: #FFF;
+    font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  }
+  
+  .btn-two {
+    font-family:  Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      color: #475a61;
+      height: 40px;
+      transition: all 0.5s;
+      position: relative;
+      opacity: 0.75;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      box-shadow: 1px 1px 2px #2b2b2b;
+      outline: none;
+      &:hover {
+        opacity: 1;
+        color: #397286
+      }
+    }
+  .btn-two::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(37, 37, 37, 0.1);
+      transition: all 0.1s;
+      border: none;
+      outline: none;
+  
+    }
+  .btn-two:hover::before {
+      opacity: 0 ;
+      transform: scale(0.5,0.5);
+    }
+  .btn-two::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      outline: none;
+  
+      transition: all 0.1s;
+      border: none;
+      transform: scale(1.2,1.2);
+    }
+  .btn-two:hover::after {
+      opacity: 1;
+      outline: none;
+  
+      transform: scale(1,1);
+    }
+    
+ 
 
 
 
