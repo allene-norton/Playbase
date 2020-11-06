@@ -27,7 +27,7 @@ Run npm start and type 'y' to start the frontend server in a new port
 ## API, How To Use, and Credits
 ### API Reference
 
-Playbase uses the Spotify API and Spotify OAuth for austhentication.
+Playbase uses the Spotify API and Spotify OAuth for authentication.
 
 ### How To Use
 
