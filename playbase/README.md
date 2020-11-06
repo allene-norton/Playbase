@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Playbase
 
-## Available Scripts
+A visually pleasing listening environment for Spotify. Search for albums, add to your collection, flip through your virtual shelf, and listen- all in the Playbase app!
 
-In the project directory, you can run:
+### Motivation
 
-### `yarn start`
+We wanted to build an app that created an 'analog' feel for listening to your favorite albums on Spotify. Flipping through records is a very satisfying, and we aimed to recreate the experience with this application
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Screenshots
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Alt text](./src/images/playbase_login.png "Title Screen")
+![Alt text](./src/images/playbase_home.png "Home Page")
+![Alt text](./src/images/playbase_search.png "Search")
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Executing the Program
 
-### `yarn build`
+Fork and clone the Playbase repo  
+Navigate to /playbase_backend
+Run bundle install  
+Run rails db:migrate  
+Run rails s to start the server
+In a new terminal (keep the backend server running!) :
+Navigate to /playbase
+Run npm start and type 'y' to start the frontend server in a new port
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API, How To Use, and Credits
+### API Reference
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Playbase uses the Spotify API and Spotify OAuth for austhentication.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How To Use
 
-### `yarn eject`
+Begin the program by following the installation instructions above.   
+Once started, login with Spotify. You must have a Spotify Premium account to use Playbase.
+Get started by searching for albums. 
+Click 'Add to Shelf' to add an album to your collection.
+From the home page, flip through your albums.
+Listen by clicking 'Play'.
+Remove albums from your shelf by clicking 'Remove'.  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Credits
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+created by github users @allene-norton and @aks2258  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### License
 
-## Learn More
+##Learn.co Educational Content License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copyright (c) 2015 Flatiron School, Inc
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Flatiron School, Inc. owns this Educational Content. However, the Flatiron School supports the development and availability of educational materials in the public domain. Therefore, the Flatiron School grants Users of the Flatiron Educational Content set forth in this repository certain rights to reuse, build upon and share such Educational Content subject to the terms of the Educational Content License set forth here (http://learn.co/content-license). You must read carefully the terms and conditions contained in the Educational Content License as such terms govern access to and use of the Educational Content.
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Flatiron School is willing to allow you access to and use of the Educational Content only on the condition that you accept all of the terms and conditions contained in the Educational Content License set forth here (http://learn.co/content-license). By accessing and/or using the Educational Content, you are agreeing to all of the terms and conditions contained in the Educational Content License. If you do not agree to any or all of the terms of the Educational Content License, you are prohibited from accessing, reviewing or using in any way the Educational Content.
