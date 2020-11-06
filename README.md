@@ -31,12 +31,18 @@ Playbase uses the Spotify API and Spotify OAuth for authentication.
 
 ### How To Use
 
-Begin the program by following the installation instructions above.   
+Begin the program by following the installation instructions above.  
+
 Once started, login with Spotify. You must have a Spotify Premium account to use Playbase.
+
 Get started by searching for albums. 
+
 Click 'Add to Shelf' to add an album to your collection.
+
 From the home page, flip through your albums.
+
 Listen by clicking 'Play'.
+
 Remove albums from your shelf by clicking 'Remove'.  
 
 ### Credits
