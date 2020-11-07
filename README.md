@@ -1,17 +1,27 @@
 # Welcome to Playbase
 
+![Alt text](playbase_login.png "Title Screen")
+
 A visually pleasing listening environment for Spotify. Search for albums, add to your collection, flip through your virtual shelf, and listen- all in the Playbase app!
 
 ### Motivation
 
 We wanted to build an app that created an 'analog' feel for listening to your favorite albums on Spotify. Flipping through records is a very satisfying, and we aimed to recreate the experience with this application
 
-### Screenshots
+### Built With
 
-![Alt text](playbase_login.png "Title Screen")
-![Alt text](playbase_home.png "Home Page")
-![Alt text](playbase_search.png "Search")
+#### Backend
 
+* Ruby [2.6.1]
+* Rails [6.0.3]
+* PostgreSQL v13, gem [1.2.3]
+* OAuth [0.5.1]
+
+#### Frontend
+
+* React [16.13.1]
+* Semantic UI React [1.3.1]
+* Custom SASS/CSS
 
 ### Executing the Program
 
@@ -20,7 +30,7 @@ Navigate to /playbase_backend
 Run bundle install  
 Run rails db:migrate  
 Run rails s to start the server
-In a new terminal (keep the backend server running!) :
+In a new terminal (keep the backend server running!)
 Navigate to /playbase
 Run npm start and type 'y' to start the frontend server in a new port
 
@@ -37,9 +47,13 @@ Once started, login with Spotify. You must have a Spotify Premium account to use
 
 Get started by searching for albums. 
 
+![Alt text](playbase_search.png "Search")
+
 Click 'Add to Shelf' to add an album to your collection.
 
 From the home page, flip through your albums.
+
+![Alt text](playbase_home.png "Home Page")
 
 Listen by clicking 'Play'.
 
