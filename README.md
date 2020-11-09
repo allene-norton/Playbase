@@ -3,6 +3,8 @@
 
 A visually pleasing listening environment for Spotify. Search for albums, add to your collection, flip through your virtual shelf, and listen- all in the Playbase app!
 
+![Demo Gif](https://github.com/allene-norton/playbase/blob/master/playbasedemogif.gif?raw=true)
+
 ### Motivation
 
 We wanted to build an app that created an 'analog' feel for listening to your favorite albums on Spotify. Flipping through records is a very satisfying, and we aimed to recreate the experience with this application
