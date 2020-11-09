@@ -1,6 +1,5 @@
 # Welcome to Playbase
 
-![Alt text](playbase_login.png "Title Screen")
 
 A visually pleasing listening environment for Spotify. Search for albums, add to your collection, flip through your virtual shelf, and listen- all in the Playbase app!
 
@@ -44,6 +43,8 @@ Playbase uses the Spotify API and Spotify OAuth for authentication.
 Begin the program by following the installation instructions above.  
 
 Once started, login with Spotify. You must have a Spotify Premium account to use Playbase.
+
+![Alt text](playbase_login.png "Title Screen")
 
 Get started by searching for albums. 
 
